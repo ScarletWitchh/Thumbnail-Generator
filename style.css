@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Cairo:wght@300;500;700;900&family=Cinzel:wght@500;700;900&family=Indie+Flower&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Philosopher:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Righteous&family=Roboto:wght@100;300;400;500;700;900&family=Shadows+Into+Light&family=Source+Code+Pro:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&family=Water+Brush&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #030e1a;
+  background-size: cover;
+  color: white;
+}
+
+.fill-all-prompt {
+  position: absolute;
+  color: red;
+  background-color: white;
+  font-weight: bold;
+  width: fit-content;
+  padding: 5px;
+  right: 10px;
+  top: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.intro {
+  width: 100vw;
+  padding: 30px;
+  background-image: url("./img/bg-el1.png");
+  background-repeat: no-repeat;
+  background-position-x: 280px;
+  background-position-y: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+.intro h3 {
+  margin-bottom: 80px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.info-collector {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#height-width p {
+  font-size: 1.2rem;
+}
+
+h2 {
+  padding: 10px 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+p {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.color-input-div{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-input-div label{
+  margin-right: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.input {
+  font-size: 1rem;
+  background-color: #171717;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 15px 10px 5px 2px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.input:focus {
+  outline: 1px solid #c20aff;
+}
+
+.next-btn,
+.download-btn {
+  overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #976eff;
+  padding: 8px 25px;
+  margin-top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.back-btn {
+  overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
+  padding: 7px 25px;
+  margin: 15px 10px 0px 0px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  background-color: #0d0d0d;
+  border-radius: 5px;
+}
+
+.set-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#font-color-input-div label{
+  font-weight: bold;
+  color: #c20aff;
+}
+
+#font-color-input-div{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+select {
+  background-color: #171717;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 9px;
+  margin-bottom: 1px;
+}
+
+select:focus {
+  outline: 1px solid #c20aff;
+}
+
+option[value="Poppins"] {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+option[value="Ubuntu"] {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+option[value="Raleway"] {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+option[value="Roboto"] {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+option[value="Cario"] {
+  font-weight: 700;
+  font-family: "Cario", sans-serif;
+}
+
+option[value="Montserrat"] {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+option[value="Philosopher"] {
+  font-weight: 700;
+  font-family: "Philosopher", sans-serif;
+}
+
+option[value="Source Code Pro"] {
+  font-weight: 700;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+option[value="Pacifico"] {
+  font-weight: 700;
+  font-family: "Pacifico", sans-serif;
+}
+
+option[value="Water Brush"] {
+  font-weight: 700;
+  font-family: "Water Brush", sans-serif;
+}
+
+option[value="Shadows Into Light"] {
+  font-weight: 700;
+  font-family: "Shadows Into Light", sans-serif;
+}
+
+option[value="Indie Flower"] {
+  font-weight: 700;
+  font-family: "Indie Flower", sans-serif;
+}
+
+option[value="Permanent Marker"] {
+  font-weight: 700;
+  font-family: "Permanent Marker", sans-serif;
+}
+
+option[value="Patrick Hand"] {
+  font-weight: 700;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+option[value="Righteous"] {
+  font-weight: 700;
+  font-family: "Righteous", sans-serif;
+}
+
+option[value="Cinzel"] {
+  font-weight: 700;
+  font-family: "Cinzel", sans-serif;
+}
+
+option[value="Bangers"] {
+  font-weight: 700;
+  font-family: "Bangers", sans-serif;
+}
+
+.bg-img-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img-preview img {
+  border-radius: 15px;
+  width: 300px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.bg-display {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bg-display-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bg-display-imgs img {
+  border-radius: 15px;
+  width: 300px;
+  margin: 20px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+
+.bg-display-imgs img:hover {
+  overflow: hidden;
+  transform: scale(1.05);
+  border-radius: 7px;
+}
+
+.canvas-div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+#canvas {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer{
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+  margin-top: -40vh;
+  background-image: url("./img/bg-el2.png");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: -1;
+}
+
+@media screen and (max-width: 375px) {
+  .height-width-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

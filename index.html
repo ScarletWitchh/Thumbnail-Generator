@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Blog Thumbnail Generator">
+    <meta property="og:title" content="Generate your blog thumbnail">
+    <meta property="og:description" content="Generate your blog thumbnail">
+    <meta property="og:image" content="<%= require('./preview-img.png') %>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:url" content="#">
+    <title>Blog Thumbnail Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="fill-all-prompt" id="fill-all-prompt">
+        <p>Please fill all the fields to proceed.</p>
+    </div>
+
+    <div class="info-collector" id="height-width">
+
+        <div class="intro">
+            <h1>Blog Thumbnail Generator</h1>
+            <h3>Generate Awesome Thumbnails within seconds for FREE</h3>
+        </div>
+
+        <p>Set width and height</p>
+        <p>If you don't know just click skip.</p>
+        <div class="set-info">
+            <div class="height-width-inputs">
+                <input class="input" type="number" autocomplete="off" placeholder="Width ( 1200 is ideal )"
+                    id="width-input">
+                <input class="input" type="number" autocomplete="off" placeholder="Height ( 630 is ideal )"
+                    id="height-input">
+            </div>
+            <div class="height-width-next">
+                <button class="back-btn skip" id="height-width-skip-btn">Skip</button>
+                <button class="next-btn" id="height-width-next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-collector" id="blog-title">
+
+        <div class="bg-img-preview" id="bg-img-preview">
+            <h2>Preview of your bg</h2>
+            <div id="bg-img-preview-img"></div>
+        </div>
+        <h2>Add Blog Title, Font and Text Color</h2>
+        <p>Write something attractive, will ya? <br> Add color in hex value (eg. #000000 is black).</p>
+
+        <div class="set-info">
+            <div class="title-input">
+                <input autocomplete="off" class="input" type="text" placeholder="Enter blog title" id="title-input">
+
+                <select name="font" id="font-selector" aria-placeholder="Choose Font">
+                    <option value="" disabled selected>Select your font</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Ubuntu">Ubutntu</option>
+                    <option value="Raleway">Raleway</option>
+                    <option value="Philosopher">Philosopher</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Source Code Pro">Source Code Pro</option>
+                    <option value="Cario">Cario</option>
+                    <option value="Pacifico">Pacifico</option>
+                    <option value="Water Brush">Water Brush</option>
+                    <option value="Shadows Into Light">Shadows Into Light</option>
+                    <option value="Indie Flower">Indie Flower</option>
+                    <option value="Permanent Marker">Permanent Marker</option>
+                    <option value="Patrick Hand">Patrick Hand</option>
+                    <option value="Righteous">Righteous</option>
+                    <option value="Cinzel">Cinzel</option>
+                    <option value="Bangers">Bangers</option>
+                </select>
+
+                <div class="color-input-div" id="font-color-input-div">
+                    <label for="">Font Color: </label>
+                    <input autocomplete="off" type="color" id="font-color-input" class="color-input">
+                </div>
+            </div>
+            <div class="title-next">
+                <button class="back-btn" id="title-back-btn">Back</button>
+                <button class="next-btn" id="title-next-btn">Make Thumbnail</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-collector" id="bg">
+        <h2>Set your background</h2>
+        <p>Choose a solid background color. <br> Or choose a theme and we will do it accordingly</p>
+
+        <div class="set-info">
+            <div class="bg-inputs">
+
+                <div class="color-input-div">
+                    <label for="">Choose a color: </label>
+                    <input class="color-input" autocomplete="off" type="color" id="bg-input">
+                </div>
+                <p>OR</p>
+                <select name="" id="bg-select">
+                    <option value="" selected>Select theme</option>
+                    <option value="motivational">Motivational</option>
+                    <option value="gym-motivation">Gym Motivation</option>
+                    <option value="self-help">Self Help</option>
+                    <option value="tech">Tech</option>
+                    <option value="story">Story</option>
+                    <option value="buisness">Buisness</option>
+                </select>
+            </div>
+
+            <div class="bg-next">
+                <button class="back-btn" id="bg-back-btn">Back</button>
+                <button class="next-btn" id="bg-next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-display" id="bg-display">
+        <h2>Choose a background</h2>
+
+        <div class="bg-display-imgs" id="bg-display-imgs">
+
+        </div>
+
+        <div class="bg-display-btns">
+            <button class="back-btn" id="bg-display-back-btn">Back</button>
+            <!-- <button class="next-btn" id="bg-display-next-btn">Next</button> -->
+        </div>
+    </div>
+
+    <div class="canvas-div" id="canvas-div">
+        <canvas id="canvas"></canvas>
+        <button class="back-btn" id="canvas-back-btn">Back</button>
+        <button class="download-btn" id="download-btn">Download</button>
+    </div>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+<script type="module" src="script.mjs"></script>
+
+</html>
